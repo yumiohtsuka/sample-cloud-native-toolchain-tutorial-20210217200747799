@@ -9,7 +9,9 @@
     "karma_unit_test": "gulp dev-karma",
     "mocha_unit_test": "gulp dev-mocha",
     "lint": "gulp lint",
-    "test": "grunt test:sauce:parallel"
+    "test": "grunt test:sauce:parallel",
+    "mocha_test": "mocha test/unit/server/**/*spec.js  --reporter json --reporter-options output=test/unit-test.json | tee test/unit-test.json",
+    "mocha_fvt_test": "./node_modules/mocha/bin/mocha --exit --recursive --reporter xunit-file test/api/"
   },
   "keywords": [
     "bluemix",
